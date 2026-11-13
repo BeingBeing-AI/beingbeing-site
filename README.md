@@ -4,6 +4,7 @@ www.beingbeing.ai 的静态官网（纯 HTML + CSS，无构建步骤），用 Gi
 
 - 页面：`index.html`、`styles.css`、`assets/`
 - `.nojekyll`：让 Pages 原样发布，不经 Jekyll 处理
-- 测试期加了 `noindex` 和 `robots.txt` 禁止收录；正式上线（绑定 www.beingbeing.ai）前去掉
+- `CNAME`：自定义域名 www.beingbeing.ai（11-13 上线）
+- 改 `styles.css` 后要更新 `index.html` 里 `styles.css?v=` 的版本号，避免浏览器用旧缓存
 
 跟踪：BeingBeing-AI/twoo#652
