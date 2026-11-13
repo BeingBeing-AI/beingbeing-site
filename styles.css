@@ -242,10 +242,21 @@ figcaption span { color: var(--muted); font-size: var(--text-xs); }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-/* 11-13 定稿素材：团队只有一位成员、联系邮箱 */
-.team-grid-single { grid-template-columns: minmax(0, 360px); }
-.team-card-confirmed { border-style: solid; border-color: var(--border); }
-.avatar-monogram { height: 164px; display: grid; place-items: center; background: var(--subtle); border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: var(--space-6); color: var(--ink); font-size: var(--text-xl); font-weight: 600; letter-spacing: 0.04em; }
+/* 11-13 定稿素材：团队一位成员（横向名片，放在介绍段下方）、联系邮箱 */
+.about-side { display: grid; gap: var(--space-8); align-content: center; }
+.about-copy { border-left: 2px solid var(--violet-line); padding: var(--space-2) 0 var(--space-2) var(--space-6); color: var(--body); line-height: var(--leading-relaxed); }
+.founder-card { display: grid; grid-template-columns: auto 1fr; gap: var(--space-6); align-items: center; padding: var(--space-6) var(--space-8); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-xl); box-shadow: 0 12px 32px -20px rgba(70, 61, 160, 0.35); }
+.founder-avatar { width: 80px; height: 80px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(135deg, var(--violet) 0%, var(--violet-deep) 100%); color: var(--inverse-text); font-size: var(--text-xl); font-weight: var(--bold); letter-spacing: 0.06em; box-shadow: 0 0 0 6px var(--violet-soft); }
+.founder-head { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-3); margin-bottom: var(--space-4); }
+.founder-head h3 { font-size: var(--text-xl); font-weight: var(--bold); color: var(--ink); }
+.founder-role { padding: var(--space-1) var(--space-3); font-weight: var(--medium); }
+.founder-label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: var(--space-1); }
+.founder-exp { color: var(--body); font-size: var(--text-base); line-height: var(--leading-normal); }
 .contact-email-line { margin-top: var(--space-4); }
 .contact-email { color: var(--inverse-text); font-size: var(--text-lg); text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
-@media (max-width: 650px) { .team-grid-single { grid-template-columns: 1fr; } .avatar-monogram { height: 180px; } .contact-email { font-size: var(--text-md); } }
+@media (max-width: 650px) {
+  .about-copy { padding-left: var(--space-4); font-size: var(--text-base); }
+  .founder-card { grid-template-columns: 1fr; gap: var(--space-4); padding: var(--space-6); }
+  .founder-avatar { width: 64px; height: 64px; font-size: var(--text-lg); }
+  .contact-email { font-size: var(--text-md); }
+}
