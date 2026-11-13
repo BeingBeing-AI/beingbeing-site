@@ -241,3 +241,11 @@ figcaption span { color: var(--muted); font-size: var(--text-xs); }
   .footer-wordmark { margin-top: var(--space-8); font-size: 12.5vw; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* 11-13 定稿素材：团队只有一位成员、联系邮箱 */
+.team-grid-single { grid-template-columns: minmax(0, 360px); }
+.team-card-confirmed { border-style: solid; border-color: var(--border); }
+.avatar-monogram { height: 164px; display: grid; place-items: center; background: var(--subtle); border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: var(--space-6); color: var(--ink); font-size: var(--text-xl); font-weight: 600; letter-spacing: 0.04em; }
+.contact-email-line { margin-top: var(--space-4); }
+.contact-email { color: var(--inverse-text); font-size: var(--text-lg); text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
+@media (max-width: 650px) { .team-grid-single { grid-template-columns: 1fr; } .avatar-monogram { height: 180px; } .contact-email { font-size: var(--text-md); } }
